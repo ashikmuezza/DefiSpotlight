@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-db_path_polygon = "D:\Masters\Semester 2\Hackathon\db\polygon.db"
+db_path_polygon = "db/polygon.db"
 
 @st.cache(allow_output_mutation=True)
 def get_connection(path: str):
