@@ -47,13 +47,17 @@ def polygon_extract():
 
     chart1 = get_data('polygon_daily_dex_volume','DEX','Polygon Daily DEXs Volume','Line')
     chart2 = get_data('polygon_daily_dex_volume_per_dex','Project','Polygon Daily Volume per DEX','Line')
-    st.altair_chart(chart1 | chart2) 
+    st.altair_chart(chart1 ) 
+    st.markdown('#')
+    st.altair_chart(chart2 )
 
     st.markdown('#') 
 
     chart1 = get_data('polygon_weekly_dex_volume','DEX','Polygon Weekly DEXs Volume','Line')
     chart2 = get_data('polygon_weekly_dex_volume_per_dex','Project','Polygon Weekly Volume per DEX','Line')
-    st.altair_chart(chart1 | chart2) 
+    st.altair_chart(chart1) 
+    st.markdown('#') 
+    st.altair_chart(chart2)
 
     st.markdown('#') 
 

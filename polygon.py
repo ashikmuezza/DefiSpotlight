@@ -31,8 +31,8 @@ def get_data(table_name,table_type,title,chart_type):
         y=alt.Y('data:Q', axis=alt.Axis(format="$s", tickCount=3, titleFontSize=12, title='Volume →'   , labelColor='#999999', titleColor='#999999', titleAnchor='end')),
         color=color
         ).properties(    title = title,
-        width=570,
-        height=300).interactive()
+        width=1100,
+        height=400).interactive()
 
         return basic_chart
     
