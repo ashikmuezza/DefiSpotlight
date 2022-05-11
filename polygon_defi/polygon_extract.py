@@ -89,7 +89,7 @@ def polygon_extract():
 
     df = get_data('polygon_dex_by_transactions_count','DEX','DEXs by Volume','Table')
     col1.header('DEXs by Transaction count')
-    col1.dataframe(df,500, 300)
+    col1.dataframe(df,700, 800)
     col2.plotly_chart(chart1)
 
     col1, col2 = st.columns((2,2))
