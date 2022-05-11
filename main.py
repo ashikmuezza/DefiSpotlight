@@ -1,18 +1,21 @@
 import streamlit as st
-import hydralit_components as hc
 import datetime
 from dune import getdata_fromdune
 from polygon import get_data
 import numpy as np
 from PIL import Image
-from streamlit_option_menu import option_menu
 from polygon_defi.polygon_extract import polygon_extract
 import time
 
 
-st.set_page_config(page_title='Defi dashboard',layout='wide',initial_sidebar_state='collapsed',)
+st.set_page_config(
+    page_title="DEFI Dash",
+    layout="wide"
+)
 
-over_theme = {'txc_inactive': '#FFFFFF'}
+
+new_title = '<p style="font-family:Bodoni; text-align: center; color:#FFFFFF; font-size: 60px;">DEFI DASHBOARD</p>'
+st.markdown(new_title, unsafe_allow_html=True)
 
 with st.sidebar:
     option = st.radio(
