@@ -5,6 +5,7 @@ from polygon import get_data
 import numpy as np
 from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract
+from defi.defi_extract import defi_home
 import time
 
 
@@ -26,7 +27,11 @@ with st.sidebar:
 
 st.write(option)
 
+if option == 'DEFI':
+  
+  defi_home()
 
-if option == 'Polygon' :
+elif option == 'Polygon' :
 
   polygon_extract()
+

@@ -6,21 +6,31 @@ from polygon import get_data
 import numpy as np
 from PIL import Image
 from streamlit_option_menu import option_menu
+from math import log, floor
 import time
 
 
 
 def polygon_extract():
     st.markdown('#') 
+    top_trend = '<p style="font-family:Courier; color:violet; font-size: 25px;">Polygon is a cutting-edge platform. It integrates the best of Ethereum and sovereign blockchains into a fully functional multi-chain system. While it is less expensive and faster to use, it does not affect the Ethereum platform’s security and interoperability. As a result, an increasing number of developers are using it to build high-quality decentralized exchanges (DEXes) on top of the Polygon network. Here is a polygon DEXs stats.</p>'
+    st.markdown(top_trend, unsafe_allow_html=True)
+
+    st.markdown('#') 
+
+    st.header('Polygon DEX Trades')
+
+    st.markdown('#') 
+    
 
     DEXs24hVolume = getdata_fromdune(630026)
     DEXs7DVolume = getdata_fromdune(630128)
     DEXs1MVolume = getdata_fromdune(630161)
-
+    
     col1, col2, col3 = st.columns((3,3,3))
-    col1.metric(label = "Past DEXs 24h Volume", value = DEXs24hVolume.values )
-    col2.metric(label = "Past DEXs 7D Volume", value = DEXs7DVolume.values )
-    col3.metric(label = "Past DEXs 1M Volume", value = DEXs1MVolume.values)
+    col1.metric(label = "Past DEXs 24h Volume in Millions", value = str(int(DEXs24hVolume.values)) + "M")
+    col2.metric(label = "Past DEXs 7D Volume in Millions", value = str(int(DEXs7DVolume.values )) + "M")
+    col3.metric(label = "Past DEXs 1M Volume in Billions", value = str(int(DEXs1MVolume.values)) + "B")
 
     DEXsTrailingGrowth24h= getdata_fromdune(630173)
     DEXsTrailingGrowth1w= getdata_fromdune(630455)
@@ -58,11 +68,11 @@ def polygon_extract():
 
     col1, col2 = st.columns((2,2))
     df = get_data('polygon_dex_by_volume','DEX','DEXs by Volume','Table')
-    col1.write('DEXs by Volume')
+    col1.header('DEXs by Volume')
     col1.dataframe(df,500, 300)
 
     df = get_data('polygon_dex_by_users','DEX','DEXs by Volume','Table')
-    col2.write('DEXs by Users')
+    col2.header('DEXs by Users')
     col2.dataframe(df,500, 300)
 
 
@@ -74,16 +84,16 @@ def polygon_extract():
     col1, col2 = st.columns((2,2))
 
     df = get_data('polygon_dex_by_transactions_count','DEX','DEXs by Volume','Table')
-    col1.write('DEXs by Transaction count')
+    col1.header('DEXs by Transaction count')
     col1.dataframe(df,500, 300)
     col2.plotly_chart(chart1)
 
     col1, col2 = st.columns((2,2))
     df = get_data('polygon_aggregators_volume','DEX','Aggregators by Volume','Table')
-    col1.write('Aggregators by Volume')
+    col1.header('Aggregators by Volume')
     col1.dataframe(df,500, 300)
 
     df1 = get_data('polygon_aggregators_marketshare_trading_volume','DEX','Aggregators Marketshare by Trading volume','Table')
-    col2.write('Aggregators Marketshare by Trading volume')
+    col2.header('Aggregators Marketshare by Trading volume')
     col2.dataframe(df1,500, 300)
 
