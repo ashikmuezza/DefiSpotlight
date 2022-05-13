@@ -1,7 +1,7 @@
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
-from polygon import get_data
+from polygon_defi.polygon import get_data
 import numpy as np
 from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract

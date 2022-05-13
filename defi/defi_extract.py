@@ -6,6 +6,7 @@ import pandas as pd
 from pathlib import Path
 import sqlite3
 from sqlite3 import Connection
+from common.connect import *
 
 
 def defi_home():
@@ -27,16 +28,12 @@ def defi_home():
     st.markdown(top_trend, unsafe_allow_html=True)
 
 
-    data = sqlite3.connect('db/defi.db', check_same_thread=False)
-    query = "SELECT * from Defi_project_top_holders"
-    df = pd.read_sql(query, con=data)
+    data = connect('db/defi.db')
 
     st.markdown('#')
 
-    plost.bar_chart(
-    data=df,
-    bar='contract_address',
-    value='holders', direction='horizontal')
+    bar_chart(data, 'Defi_project_top_holders', 'contract_address', 'holders')
+
 
 
 

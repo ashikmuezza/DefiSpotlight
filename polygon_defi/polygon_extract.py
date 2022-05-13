@@ -1,13 +1,11 @@
 import streamlit as st
-import hydralit_components as hc
 import datetime
 from dune import getdata_fromdune
-from polygon import get_data
+from polygon_defi.polygon import get_data
 import numpy as np
 from PIL import Image
-from streamlit_option_menu import option_menu
-from math import log, floor
-import time
+
+from common.connect import *
 
 
 
@@ -44,60 +42,68 @@ def polygon_extract():
     col6.metric(label = "DEXs Trailing Past 1M Growth", value =  DEXsTrailingGrowth1m['monthly_trailing_growth'][0] )
 
     st.markdown('#') 
+    data = connect('db/polygon.db')
 
-    chart1 = get_data('polygon_daily_dex_volume','DEX','Polygon Daily DEXs Volume','Line')
-    chart2 = get_data('polygon_daily_dex_volume_per_dex','Project','Polygon Daily Volume per DEX','Line')
-    st.altair_chart(chart1 ) 
-    st.markdown('#')
-    st.altair_chart(chart2 )
+    line_chart(data,'polygon_daily_dex_volume', 'time', 'volume', "Polygon Daily DEXs Volume (LAST_3_MONTHS)")
+    line_chart_multi(data,'polygon_daily_dex_volume_per_dex', 'time', 'volume', 'project', "Polygon Daily DEXs Volume (LAST_3_MONTHS)")
+    st.markdown('#') 
+    line_chart(data,'polygon_weekly_dex_volume', 'time', 'volume', "Polygon Weekly DEXs Volume")
+    line_chart_multi(data,'polygon_weekly_dex_volume_per_dex', 'time', 'volume', 'project', "Polygon Weekly Volume per DEX")
+
 
     st.markdown('#') 
-
-    chart1 = get_data('polygon_weekly_dex_volume','DEX','Polygon Weekly DEXs Volume','Line')
-    chart2 = get_data('polygon_weekly_dex_volume_per_dex','Project','Polygon Weekly Volume per DEX','Line')
-    st.altair_chart(chart1) 
-    st.markdown('#') 
-    st.altair_chart(chart2)
-
-    st.markdown('#') 
-
-    chart1 = get_data('polygon_dex_marketshare_last_week','DEX','DEX Marketshare by Volume','Donut')
     col1, col2 = st.columns((2,2))
-    col1.plotly_chart(chart1)
-    chart2 = get_data('polygon_dex_marketshare_trading_volume','Project','DEX Marketshare based on Trading Volume','Donut')
-    col2.plotly_chart(chart2)
+    with col1:
+        pie_chart(data, 'polygon_dex_marketshare_last_week', 'Marketshare', 'Project', 'DEX Marketshare by Volume Last Week')
+    with col2:
+        line_chart_multi(data, 'polygon_dex_marketshare_trading_volume', 'time', 'volume', 'project', 'DEX Marketshare By Trading Volume')
 
-    st.markdown('#') 
+   
     st.markdown('#') 
 
     col1, col2 = st.columns((2,2))
-    df = get_data('polygon_dex_by_volume','DEX','DEXs by Volume','Table')
+
+    df = table(data,'polygon_dex_by_volume')
     col1.header('DEXs by Volume')
-    col1.dataframe(df,500, 300)
+    with col1:
 
-    df = get_data('polygon_dex_by_users','DEX','DEXs by Volume','Table')
+        st.dataframe(df,500, 300)
+
+    df = table(data,'polygon_dex_by_users')
     col2.header('DEXs by Users')
-    col2.dataframe(df,500, 300)
+    with col2:
+        st.dataframe(df,500, 300)
 
 
     st.markdown('#') 
-    st.markdown('#') 
 
 
-    chart1 = get_data('polygon_aggregators_volume','Project','Aggregators by Volume','Donut')
-    col1, col2 = st.columns((2,2))
-
-    df = get_data('polygon_dex_by_transactions_count','DEX','DEXs by Volume','Table')
+    df = table(data,'polygon_dex_by_transactions_count')
     col1.header('DEXs by Transaction count')
-    col1.dataframe(df,700, 800)
-    col2.plotly_chart(chart1)
+    st.dataframe(df,700,1200)
+   
+    st.markdown('#') 
+    st.markdown("#")
+
+    st.title("Aggregators Stats")
+
+    st.markdown('#') 
+    st.markdown("#")
+
+    agg_7d =  getdata_fromdune(630279)
+    agg_growth = getdata_fromdune(631143)
+
+    col1, col2 = st.columns((3,3))
+    col1.metric(label = "Aggregators Marketshare (From 7D Volume)", value = str(int(agg_7d.values)) + "%")
+    col2.metric(label = "Aggregator Marketshare Growth", value = str(agg_growth.values)[3:8])
+
+    st.markdown("#")
 
     col1, col2 = st.columns((2,2))
-    df = get_data('polygon_aggregators_volume','DEX','Aggregators by Volume','Table')
-    col1.header('Aggregators by Volume')
-    col1.dataframe(df,500, 300)
+    with col1:
+        line_chart_multi(data, 'polygon_aggregators_volume', 'time', 'volume', 'project', 'Aggregators by Volume' )
+    with col2:
+        line_chart_multi(data, 'polygon_aggregators_marketshare_trading_volume', 'time', 'volume', 'project', 'Aggregators Marketshare by Trading volume' )
 
-    df1 = get_data('polygon_aggregators_marketshare_trading_volume','DEX','Aggregators Marketshare by Trading volume','Table')
-    col2.header('Aggregators Marketshare by Trading volume')
-    col2.dataframe(df1,500, 300)
 
+    
