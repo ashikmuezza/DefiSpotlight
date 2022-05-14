@@ -1,3 +1,4 @@
+from email import header
 from enum import unique
 import streamlit as st
 import plost
@@ -39,6 +40,7 @@ def dydx_extract():
     st.markdown("#")
     line_chart(data, 'DYDX_daily_transcation_count', 'date_trunc', 'count', 'DYDX_daily_transaction_count')
 
+    
 
     st.title("Staking Stats")
     unique = getdata_fromdune(233667)
@@ -48,7 +50,7 @@ def dydx_extract():
 
     col1, col2= st.columns((2,2))
     col1.metric(label = "dydx_USDC Unique Stakers", value = str(int(unique_value)) )
-    col2.metric(label = "dydx_USDC Staked Current Balance", value = str(int(getdata_fromdune(233683).values )) )
+    col2.metric(label = "dydx_USDC Staked Current Balance", value = "$"+str(int(getdata_fromdune(233683).values )) )
 
     st.markdown('#') 
 
@@ -63,5 +65,21 @@ def dydx_extract():
         line_chart(data, 'DYDX_daily_stakers', 'day', 'stakers', 'DYDX Daily Stakers')
     with col2:
         pie_chart(data, 'DYDX_staked_usdc', 'sum', 'staker', 'DYDX_Staking_Wallets')
+
+    st.title("Token Stats")
+
+    st.markdown('#') 
+
+    col1, col2 = st.columns((2,2))
+    with col1:
+        st.dataframe(table(data, 'DYDY_token_holders'))
+    with col2:
+        line_chart(data, 'DYDX_token_price', 'minute', 'price', 'Token Price')
+    
+    st.markdown('#') 
+    line_chart(data, 'DYDX_daily_buy_on_dex', 'date', ('unique_wallet_count','trade_count'), 'Unique Wallet & Trade Counts')
+    st.markdown('#') 
+    line_chart(data, 'DYDX_active_users', 'time', 'New', 'Active Users')
+
 
     
