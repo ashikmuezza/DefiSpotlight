@@ -3,6 +3,8 @@ from sqlite3 import Connection
 import pandas as pd
 import plost
 
+from common.date_change import date_change
+
 
 
 def connect(db_link):
@@ -13,9 +15,8 @@ def line_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"
     df = pd.read_sql(query, con=data)
 
-    if 'time' in df:
-        df['time'] = pd.to_datetime(df['time'])
-    # df['time'] = df['time'].dt.date
+    date_change(df)
+
     plost.line_chart(
         df,
         x=x,
@@ -25,8 +26,7 @@ def line_chart_multi(data, table, x, y, project, title):
     query = f"SELECT * from {table}"
     df = pd.read_sql(query, con=data)
 
-    if 'time' in df:
-        df['time'] = pd.to_datetime(df['time'])
+    date_change(df)
    
     plost.line_chart(
         df,
@@ -35,13 +35,13 @@ def line_chart_multi(data, table, x, y, project, title):
         color=project,
         width=500, height=400, title=title)
 
-def bar_chart(data, table, x, y):
+def bar_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"
     df = pd.read_sql(query, con=data)
     plost.bar_chart(
     data=df,
     bar=x,
-    value=y, direction='horizontal')
+    value=y, direction='horizontal', title = title)
 
 def pie_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"
@@ -49,7 +49,16 @@ def pie_chart(data, table, x, y, title):
     plost.pie_chart(
     data=df,
     theta=x,
-    color=y, width=500, height=400, title=title)
+    color=y, width=300, height=400, title=title)
+
+def bar_chart_vertical(data, table, x, y, title):
+    query = f"SELECT * from {table}"
+    df = pd.read_sql(query, con=data)
+    date_change(df)
+    plost.bar_chart(
+    data=df,
+    bar=x,
+    value=y, width=500, height=400,title = title)
 
 def table(data, table):
     query = f"SELECT * from {table}"

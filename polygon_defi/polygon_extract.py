@@ -1,7 +1,7 @@
+
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
-from polygon_defi.polygon import get_data
 import numpy as np
 from PIL import Image
 
@@ -92,6 +92,8 @@ def polygon_extract():
 
     agg_7d =  getdata_fromdune(630279)
     agg_growth = getdata_fromdune(631143)
+    agg_volume = getdata_fromdune(630478)
+    agg_user = getdata_fromdune(630487)
 
     col1, col2 = st.columns((3,3))
     col1.metric(label = "Aggregators Marketshare (From 7D Volume)", value = str(int(agg_7d.values)) + "%")
@@ -105,5 +107,11 @@ def polygon_extract():
     with col2:
         line_chart_multi(data, 'polygon_aggregators_marketshare_trading_volume', 'time', 'volume', 'project', 'Aggregators Marketshare by Trading volume' )
 
+    st.markdown("#")
 
-    
+    col1, col2 = st.columns((3,3))
+
+    with col1:
+        st.dataframe(agg_volume)
+    with col2:
+        st.dataframe(agg_user)

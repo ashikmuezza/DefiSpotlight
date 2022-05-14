@@ -32,7 +32,7 @@ def defi_home():
 
     st.markdown('#')
 
-    bar_chart(data, 'Defi_project_top_holders', 'contract_address', 'holders')
+    bar_chart(data, 'Defi_project_top_holders', 'contract_address', 'holders', 'Top_Holders')
 
 
 

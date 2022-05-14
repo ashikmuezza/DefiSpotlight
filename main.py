@@ -1,11 +1,11 @@
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
-from polygon_defi.polygon import get_data
 import numpy as np
 from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract
 from defi.defi_extract import defi_home
+from dydx.dydx_extract import dydx_extract
 import time
 
 
@@ -28,10 +28,13 @@ with st.sidebar:
 st.write(option)
 
 if option == 'DEFI':
-  
   defi_home()
 
 elif option == 'Polygon' :
-
   polygon_extract()
+
+elif option == 'DYDX' :
+  dydx_extract()
+
+
 
