@@ -1,5 +1,3 @@
-from email import header
-from enum import unique
 import streamlit as st
 import plost
 import datetime
@@ -79,7 +77,7 @@ def dydx_extract():
     st.markdown('#') 
     line_chart(data, 'DYDX_daily_buy_on_dex', 'date', ('unique_wallet_count','trade_count'), 'Unique Wallet & Trade Counts')
     st.markdown('#') 
-    line_chart(data, 'DYDX_active_users', 'time', 'New', 'Active Users')
+    line_chart(data, 'DYDX_active_users', 'time', 'New', 'Active New Users')
 
 
     
