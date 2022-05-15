@@ -1,3 +1,4 @@
+import imp
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
@@ -6,6 +7,7 @@ from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract
 from defi.defi_extract import defi_home
 from dydx.dydx_extract import dydx_extract
+from maker.maker_extract import maker_extract
 import time
 
 
@@ -15,7 +17,7 @@ st.set_page_config(
 )
 
 
-new_title = '<p style="font-family:Bodoni; text-align: center; color:#FFFFFF; font-size: 60px;">DEFI DASHBOARD</p>'
+new_title = '<p style="font-family:Bodoni; text-align: center; color:#FFFFFF; font-size: 60px;">DEFI SPOTLIGHT</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
 with st.sidebar:
@@ -35,6 +37,10 @@ elif option == 'Polygon' :
 
 elif option == 'DYDX' :
   dydx_extract()
+
+elif option == 'Makerdao' :
+  maker_extract()
+
 
 
 
