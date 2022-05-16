@@ -19,6 +19,9 @@ def date_change(df):
     if 'day' in df:
         df['day'] = pd.to_datetime(df['day'])
     
+    if 'Day' in df:
+        df['Day'] = pd.to_datetime(df['Day'])
+    
     if 'minute' in df:
         df['minute'] = pd.to_datetime(df['minute'])
     

@@ -12,15 +12,8 @@ from common.connect import *
 def lyra_home():
     st.markdown('#')
 
-    Lyra_title = '<p style="font-family:Courier; color:violet; font-size: 20px;">Lyra is an options trading protocol accessing the scalability of Layer 2 Ethereum to provide a robust, lightning-fast and reliable trading experience.</p>'
+    Lyra_title = '<p style="font-family:Courier; color:violet; font-size: 20px;">Lyra is an open protocol for trading options built on Ethereum. Lyra allows traders to buy and sell options that are accurately priced with the first market-based, skew adjusted pricing model..</p>'
     st.markdown(Lyra_title, unsafe_allow_html=True)
-
-    st.markdown('#')
-
-    st.header("Why is Lyra important?")
-
-    top_trend = '<p style="font-family:Courier; color:violet; font-size: 20px;">Lyra is designed and coded from the ground up, which allows to include most recent achievements in blockchain technologies. Those new technologies in turn allow to implement features that prevent mass adoption of most existing blockchains by mainstream: very high scalability, instant authorizations and settlements, super light clients, no chargebacks, no locked balances, native multi-token (i.e. multi currency) support, built-in decentralized exchange, and more.</p>'
-    st.markdown(top_trend, unsafe_allow_html=True)
 
     st.markdown('#')
 
@@ -36,7 +29,7 @@ def lyra_home():
     col1, col2 , col3, col4  = st.columns((4,4,4,4))
 
     col1.metric(label = "Notional Volume", value = '$'+ str(  int(NotionalVolume["totalnotional"])) + "M")
-    col2.metric(label = "Premium Traded", value = '$'+ str( "{:,}".format(int(PremiumTraded["total_susd_volume"] )) ))
+    col2.metric(label = "Premium Volume", value = '$'+ str( "{:,}".format(int(PremiumTraded["total_susd_volume"] )) ))
     
     col3.metric(label = "Total Trades", value = str("{:,}".format(int(PremiumTraded["total_trades"]))))
     col4.metric(label = "Unique Trades", value = str("{:,}".format(int(PremiumTraded["unique_traders"]))))
@@ -54,14 +47,13 @@ def lyra_home():
     st.markdown('#') 
     col1, col2 = st.columns((2,2))
     with col1:
-        line_chart(data, 'Lyra_unique_users', 'times','UniqueTraders', 'Daily Unique Traders')
+        line_chart(data, 'unique_traders', 'times','UniqueTraders', 'Daily Unique Traders')
     with col2:
-        bar_chart_vertical(data, 'Lyra_unique_users', 'times', 'cumUniqueTraders', 'Lyra Total Users')
+        line_chart(data, 'unique_traders', 'times', 'totalTrades', 'Total Traders By Day')
 
-    
+    line_chart(data, 'unique_traders', 'times', 'avgTrades', 'AVG Traders')
    
-    st.markdown('#')
-    line_chart_multi(data, 'Lyra_trade_history', 'evt_block_time','totalCost','market' , 'Daily Unique Traders')
+    
 
 
     st.markdown('#') 
@@ -76,20 +68,45 @@ def lyra_home():
 
     col1, col2 = st.columns((2,2))
 
-    df = table(data,'lyra_btc_marketpool')
-    col1.header('Lyra BTC Marketpool')
     with col1:
 
-        st.dataframe(df,500, 300)
-
-    df = table(data,'lyra_eth_marketpool')
-    col2.header('Lyra ETH Marketpool')
+        line_chart(data, 'Lyra_btc_marketpool', 'evt_block_time', 'Price', 'Lyra_btc_marketpool_price')
+   
     with col2:
-        st.dataframe(df,500, 300)
 
-    df = table(data,'lyra_link_marketpool')
-    st.header('Lyra Link Marketpool')
-    st.dataframe(df,500, 300)    
+        line_chart(data, 'Lyra_btc_marketpool', 'evt_block_time', 'pool_value', 'Lyra_btc_marketpool_price')
 
-    # st.markdown('#') 
-    # line_chart(data, 'lyra_btc_marketpool', 'evt_block_time','Price', 'lyra_btc_marketpool')
+    st.markdown('#') 
+    col1, col2 = st.columns((2,2))
+
+    with col1:
+
+        line_chart(data, 'Lyra_eth_marketpool', 'evt_block_time', 'Price', 'Lyra_eth_marketpool_pool_value')
+   
+    with col2:
+
+        line_chart(data, 'Lyra_eth_marketpool', 'evt_block_time', 'pool_value', 'Lyra_eth_marketpool_pool_value')
+
+    st.markdown('#') 
+    col1, col2 = st.columns((2,2))
+
+    with col1:
+
+        line_chart(data, 'Lyra_link_marketpool', 'evt_block_time', 'Price', 'Lyra_link_marketpool_pool_value')
+   
+    with col2:
+
+        line_chart(data, 'Lyra_link_marketpool', 'evt_block_time', 'pool_value', 'Lyra_link_marketpool_pool_value')
+
+    st.markdown('#') 
+    st.subheader("Lyra Recent Trade History")
+    st.dataframe(table(data,'Lyra_trade_history'))
+
+    st.markdown('#') 
+
+    line_chart(data, 'lyra_susd_volume', 'day', 'total_susd_volume', 'Lyra sUSD Volume')
+
+    pie_chart(data, 'lyra_profitable_traders', 'trader', 'totalrealizedprofit', 'Lyra Profitable Traders')
+
+    pie_chart(data, 'lyra_high_volume_traders', 'trader', 'notional', 'Lyra High Volume Traders')
+

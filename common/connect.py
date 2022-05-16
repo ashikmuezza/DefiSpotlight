@@ -38,6 +38,8 @@ def line_chart_multi(data, table, x, y, project, title):
 def bar_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"
     df = pd.read_sql(query, con=data)
+    if 'exchange' in df:
+        df = df[df['exchange'].notna()]
     plost.bar_chart(
     data=df,
     bar=x,
@@ -46,6 +48,8 @@ def bar_chart(data, table, x, y, title):
 def pie_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"
     df = pd.read_sql(query, con=data)
+    if 'classification' in df:
+        df = df[df['classification'].notna()]
     plost.pie_chart(
     data=df,
     theta=x,
