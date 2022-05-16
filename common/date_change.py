@@ -24,3 +24,9 @@ def date_change(df):
     
     if 'dt' in df:
         df['dt'] = pd.to_datetime(df['dt'])
+
+    if 'times' in df :
+        df['times'] = pd.to_datetime(df['times'])
+
+    if 'evt_block_time' in df :
+        df['evt_block_time'] = pd.to_datetime(df['evt_block_time'])            

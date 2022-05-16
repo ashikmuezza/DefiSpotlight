@@ -8,6 +8,9 @@ from polygon_defi.polygon_extract import polygon_extract
 from defi.defi_extract import defi_home
 from dydx.dydx_extract import dydx_extract
 from maker.maker_extract import maker_extract
+from lyra.lyra_extract import lyra_home
+from chainlink.chainLink_extract import chainlink_home
+
 import time
 
 
@@ -17,17 +20,17 @@ st.set_page_config(
 )
 
 
-new_title = '<p style="font-family:Bodoni; text-align: center; color:#FFFFFF; font-size: 60px;">DEFI SPOTLIGHT</p>'
+new_title = '<p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color:#FFFFFF; font-size: 60px;">DEFI SPOTLIGHT</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
 with st.sidebar:
     option = st.radio(
         'Select sponsors',
-        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap'))
+        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap','Lyra','Chainlink'))
 
      
+st.header(option)
 
-st.write(option)
 
 if option == 'DEFI':
   defi_home()
@@ -41,6 +44,11 @@ elif option == 'DYDX' :
 elif option == 'Makerdao' :
   maker_extract()
 
+elif option == 'Lyra' :
+  lyra_home()
+
+elif option == 'Chainlink' :
+  chainlink_home()
 
 
 
