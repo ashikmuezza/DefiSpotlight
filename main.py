@@ -9,7 +9,9 @@ from defi.defi_extract import defi_home
 from dydx.dydx_extract import dydx_extract
 from maker.maker_extract import maker_extract
 from lyra.lyra_extract import lyra_home
+from badger.badger_extract import badger_extract
 from chainlink.chainLink_extract import chainlink_home
+from unstoppable.unstop_extract import unstop_extract
 
 import time
 
@@ -26,7 +28,7 @@ st.markdown(new_title, unsafe_allow_html=True)
 with st.sidebar:
     option = st.radio(
         'Select sponsors',
-        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap','Lyra','Chainlink'))
+        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap','Lyra','Chainlink', 'Badger', 'Unstoppable'))
 
      
 st.header(option)
@@ -49,6 +51,13 @@ elif option == 'Lyra' :
 
 elif option == 'Chainlink' :
   chainlink_home()
+
+elif option == 'Badger' :
+  badger_extract()
+
+elif option == 'Unstoppable' :
+  unstop_extract()
+
 
 
 
