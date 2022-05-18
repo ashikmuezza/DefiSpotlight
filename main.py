@@ -12,6 +12,8 @@ from lyra.lyra_extract import lyra_home
 from badger.badger_extract import badger_extract
 from chainlink.chainLink_extract import chainlink_home
 from unstoppable.unstop_extract import unstop_extract
+from epns.epns_extract import epns_extract
+from common.covalent.covalent_extract import covalent_extract
 
 import time
 
@@ -28,7 +30,9 @@ st.markdown(new_title, unsafe_allow_html=True)
 with st.sidebar:
     option = st.radio(
         'Select sponsors',
-        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap','Lyra','Chainlink', 'Badger', 'Unstoppable'))
+        ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap',
+        'Lyra','Chainlink', 'Badger', 'Unstoppable', 'epns',
+        'covalent'))
 
      
 st.header(option)
@@ -57,6 +61,14 @@ elif option == 'Badger' :
 
 elif option == 'Unstoppable' :
   unstop_extract()
+
+elif option == 'epns' :
+  epns_extract()
+
+elif option == 'covalent' :
+  covalent_extract()
+
+
 
 
 

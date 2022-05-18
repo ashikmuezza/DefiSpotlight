@@ -33,7 +33,7 @@ def line_chart_multi(data, table, x, y, project, title):
         x=x,
         y=y,
         color=project,
-        width=500, height=400, title=title)
+        width=500, height=400, title=title, legend='right')
 
 def bar_chart(data, table, x, y, title):
     query = f"SELECT * from {table}"

@@ -32,8 +32,8 @@ def unstop_extract():
     eth_wash = eth[eth['is_washtrade'] == 'Washtrade']
 
     col1, col2 = st.columns((2,2))
-    col1.metric(label = "Polygon Sales Volume", value = int(polygon['sale_price_usd'].sum()))
-    col2.metric(label = "ETH Sales Volume", value = int(eth['sale_price_usd'].sum()))
+    col1.metric(label = "Polygon Sales Volume in USD", value = '$' + str(int(polygon['sale_price_usd'].sum())))
+    col2.metric(label = "ETH Sales Volume in USD", value = '$' + str(int(eth['sale_price_usd'].sum())))
     col1.metric(label = "Polygon sales Count", value = int(len(polygon['sale_price_usd'])))
     col2.metric(label = "ETH sales Count", value = int(len(eth['sale_price_usd'])))
 

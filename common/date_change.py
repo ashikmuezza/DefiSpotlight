@@ -6,6 +6,9 @@ def date_change(df):
     
     if 'week' in df :
         df['week'] = pd.to_datetime(df['week'])
+
+    if 'Week' in df :
+        df['Week'] = pd.to_datetime(df['Week'])
     
     if 'hour' in df :
         df['hour'] = pd.to_datetime(df['hour'])
