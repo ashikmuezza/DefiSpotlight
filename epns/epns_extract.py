@@ -13,7 +13,7 @@ from common.connect import *
 def epns_extract():
     st.markdown('#')
 
-    Defi_title = '<p style="font-family:Courier; color:violet; font-size: 20px;">Unstoppable domains are a type of domain name that uses blockchain technology to handle registration and many other features. Rather than using domain name services (DNSs) like traditional websites, unstoppable domains use a blockchain-based solution called the crypto name service (CNS)..</p>'
+    Defi_title = '<p style="font-family:Courier; color:violet; font-size: 20px;">EPNS stands for Ethereum Push Notification Service . EPNS aims to solve the problem of sending push notifications to users, which is missing from the web3 ecosystem right now..</p>'
     st.markdown(Defi_title, unsafe_allow_html=True)
 
     st.markdown('#')

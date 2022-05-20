@@ -1,4 +1,3 @@
-import imp
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
@@ -14,6 +13,7 @@ from chainlink.chainLink_extract import chainlink_home
 from unstoppable.unstop_extract import unstop_extract
 from epns.epns_extract import epns_extract
 from common.covalent.covalent_extract import covalent_extract
+from yearn.yearn_extract import yearn_extract
 
 import time
 
@@ -32,7 +32,7 @@ with st.sidebar:
         'Select sponsors',
         ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap',
         'Lyra','Chainlink', 'Badger', 'Unstoppable', 'epns',
-        'covalent'))
+        'covalent', 'yearn'))
 
      
 st.header(option)
@@ -67,6 +67,9 @@ elif option == 'epns' :
 
 elif option == 'covalent' :
   covalent_extract()
+
+elif option == 'yearn' :
+  yearn_extract()
 
 
 

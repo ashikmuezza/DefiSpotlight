@@ -108,15 +108,20 @@ def unstop_extract():
             st.info("Transaction Table")
             st.dataframe(data)
             data1['timestamp'] = pd.to_datetime(data1['timestamp'])
-            data1['date'] = data1['timestamp'].dt.date
-            data1 = data1.sort_values(by="date")
-            line = alt.Chart(data1).mark_bar().encode(
-                    x = 'date',
-                    y = 'sale_price_eth'
-                ).properties(width = 1100, height = 400, ).interactive()
-            st.markdown('####')
-            st.info('Sale Chart')
-            st.altair_chart(line)
+            plost.bar_chart(
+                data1,
+                bar='timestamp',
+                value='sale_price_eth',width=1000, height=400, title="sale_data")
+
+            # data1['date'] = data1['timestamp'].dt.date
+            # data1 = data1.sort_values(by="date")
+            # line = alt.Chart(data1).mark_bar().encode(
+            #         x = 'datte',
+            #         y = 'sale_price_eth'
+            #     ).properties(width = 1100, height = 400, ).interactive()
+            # st.markdown('####')
+            # st.info('Sale Chart')
+            # st.altair_chart(line)
 
         except:
             st.warning("Info not found in DB")
