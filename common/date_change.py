@@ -42,3 +42,9 @@ def date_change(df):
 
     if 'evt_block_time' in df :
         df['evt_block_time'] = pd.to_datetime(df['evt_block_time'])            
+    
+    if 'month' in df :
+        df['month'] = pd.to_datetime(df['month'])    
+
+    if 'datex' in df :
+        df['datex'] = pd.to_datetime(df['datex'])    

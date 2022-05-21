@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -22,8 +22,8 @@ def lyra_home():
     st.markdown('#') 
     
 
-    NotionalVolume = getdata_fromdune(257373)
-    PremiumTraded = getdata_fromdune(163118)
+    NotionalVolume = getdata(257373)
+    PremiumTraded = getdata(163118)
 
     
     col1, col2 , col3, col4  = st.columns((4,4,4,4))

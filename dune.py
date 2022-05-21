@@ -3,7 +3,7 @@ from duneanalytics import DuneAnalytics
 import streamlit as st
 
 @st.cache(allow_output_mutation=True)
-def getdata_fromdune(query_id):
+def getdata(query_id):
 
     # login
     dune = DuneAnalytics('Tachikoma000', 'iZ7kUnw!B8!XUTe')

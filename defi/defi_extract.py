@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3

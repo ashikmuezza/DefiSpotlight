@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -18,8 +18,8 @@ def epns_extract():
 
     st.markdown('#')
     data = connect("db/epns.db")
-    holders = getdata_fromdune(589646)
-    price = getdata_fromdune(589850)
+    holders = getdata(589646)
+    price = getdata(589850)
 
     col1, col2 = st.columns((2,2))
     col1.metric(label = "PUSH Holders", value = holders['$PUSH Holders'].iloc[0])

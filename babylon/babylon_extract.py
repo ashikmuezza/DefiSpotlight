@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -16,7 +16,7 @@ def baby_extract():
 
     data = connect('db/babylon.db')
 
-    locked = getdata_fromdune(650022)
+    locked = getdata(650022)
 
 
     col1, col2, col3 = st.columns((2,2,2))

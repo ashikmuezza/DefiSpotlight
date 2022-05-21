@@ -1,7 +1,7 @@
 from babylon.babylon_extract import baby_extract
 import streamlit as st
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import numpy as np
 from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract
@@ -16,6 +16,10 @@ from epns.epns_extract import epns_extract
 from common.covalent.covalent_extract import covalent_extract
 from yearn.yearn_extract import yearn_extract
 from olympus.olympus_extract import olympus_extract
+from aave.aave_extract import aave_extract
+from uniswap.uniswap_extract import uniswap_extract
+from apwine.apwine_extract import apwine_extract
+
 
 import time
 
@@ -33,8 +37,8 @@ with st.sidebar:
     option = st.radio(
         'Select sponsors',
         ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap',
-        'Lyra','Chainlink', 'Badger', 'Unstoppable', 'epns',
-        'covalent', 'yearn', 'olympus', 'babylon'))
+        'Lyra','Chainlink', 'Badger', 'Unstoppable', 'Epns',
+        'Covalent', 'Yearn', 'Olympus', 'Babylon','Aave','Apwine'))
 
      
 st.header(option)
@@ -64,20 +68,29 @@ elif option == 'Badger' :
 elif option == 'Unstoppable' :
   unstop_extract()
 
-elif option == 'epns' :
+elif option == 'Epns' :
   epns_extract()
 
-elif option == 'covalent' :
+elif option == 'Covalent' :
   covalent_extract()
 
-elif option == 'yearn' :
+elif option == 'Yearn' :
   yearn_extract()
 
-elif option == 'olympus':
+elif option == 'Olympus':
   olympus_extract()
 
-elif option == 'babylon':
+elif option == 'Babylon':
   baby_extract()
+
+elif option == 'Aave':
+  aave_extract()
+
+elif option == 'Apwine':
+  apwine_extract()
+
+elif option == 'Uniswap':
+  uniswap_extract()
 
 
 

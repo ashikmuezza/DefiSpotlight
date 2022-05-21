@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -19,8 +19,8 @@ def yearn_extract():
     st.markdown('#')
     data = connect("db/yearn.db")
 
-    one_day = getdata_fromdune(667379)
-    thirty_days = getdata_fromdune(667371)
+    one_day = getdata(667379)
+    thirty_days = getdata(667371)
 
     col1, col2 = st.columns((2,2))
     col1.metric(label = "Yearn vaults user activity in the latest 24 hours", value = one_day['unique_users'].iloc[0])

@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -20,9 +20,9 @@ def chainlink_home():
     data = connect('db/chainlink.db')
 
     col1, col2, col3 = st.columns((3,3,3))
-    col1.metric(label = "Wallets with (LINK))", value = str(int(getdata_fromdune(188622).values)) )
-    col2.metric(label = "Wallets with > 10  (LINK)", value = str(int(getdata_fromdune(189866).values)) )
-    col3.metric(label = "Wallets with > 100 (LINK)", value = str(int(getdata_fromdune(189892).values)))
+    col1.metric(label = "Wallets with (LINK))", value = str(int(getdata(188622).values)) )
+    col2.metric(label = "Wallets with > 10  (LINK)", value = str(int(getdata(189866).values)) )
+    col3.metric(label = "Wallets with > 100 (LINK)", value = str(int(getdata(189892).values)))
 
     st.markdown('#')
 

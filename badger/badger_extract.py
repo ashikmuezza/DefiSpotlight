@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -20,9 +20,9 @@ def badger_extract():
 
     st.markdown('#') 
     col1, col2, col3 = st.columns((3,3,3))
-    col1.metric(label = "wallet > 0 (Badger)", value = str(int(getdata_fromdune(501694).values)) )
-    col2.metric(label = "wallet > 1000 (Badger)", value = str(int(getdata_fromdune(501701).values)) )
-    col3.metric(label = "wallet > 100,000 (Badger)", value = str(int(getdata_fromdune(501703).values)))
+    col1.metric(label = "wallet > 0 (Badger)", value = str(int(getdata(501694).values)) )
+    col2.metric(label = "wallet > 1000 (Badger)", value = str(int(getdata(501701).values)) )
+    col3.metric(label = "wallet > 100,000 (Badger)", value = str(int(getdata(501703).values)))
 
     st.subheader("Badger Token")
     data = connect('db/badger.db')
