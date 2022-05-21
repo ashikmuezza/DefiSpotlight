@@ -268,8 +268,6 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
 Website link : [NFT Data House](https://share.streamlit.io/manidills/eth_dash/main.py)
 
 
-<a href="https://ibb.co/cb89FY6"><img src="https://i.ibb.co/cb89FY6/shot1.png" alt="shot1" border="0"></a>
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
