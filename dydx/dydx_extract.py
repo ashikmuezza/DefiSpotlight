@@ -75,7 +75,8 @@ def dydx_extract():
         line_chart(data, 'DYDX_token_price', 'minute', 'price', 'Token Price')
     
     st.markdown('#') 
-    line_chart(data, 'DYDX_daily_buy_on_dex', 'date', ('unique_wallet_count','trade_count'), 'Unique Wallet & Trade Counts')
+    line_chart(data, 'DYDX_daily_buy_on_dex', 'date', 'unique_wallet_count', 'Unique Wallet Counts')
+    line_chart(data, 'DYDX_daily_buy_on_dex', 'date', 'trade_count', 'Trade_counts')
     st.markdown('#') 
     line_chart(data, 'DYDX_active_users', 'time', 'New', 'Active New Users')
 
