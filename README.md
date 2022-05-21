@@ -42,7 +42,7 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
 ### Protocols
 * Polygon DEX Trades
      ```js
-         1.Past DEXs 24h Volume in Millions
+    1.Past DEXs 24h Volume in Millions
     2.Past DEXs 7D Volume in Millions
     3.Past DEXs 1M Volume in Billions
     4.DEXs Trailing Past 24h Growth
@@ -61,7 +61,27 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
    
    ```
 
-* NFT Volume growth prediction
+* DYDX
+    ```js
+    1.Wallets with > 0 Address (DYDX)
+    2.Wallets with > 1000 Address (DYDX)
+    3.Wallets with > 100,000 Address (DYDX)
+    4.DYDX Daily New Users
+    5.DYDX Daily Volume
+    6.DYDX_daily_transaction_count
+    7.dydx_USDC Unique Stakers
+    8.dydx_USDC Staked Current Balance
+    9.DYDX_USDC_Staked
+    10.DYDX_amount_of_withdraw
+    11.DYDX_daily_stakers
+    12.DYDX_staked_usdc
+    13.DYDY_token_holders
+    14.DYDX_token_price
+    15.DYDX_daily_buy_on_dex
+    16.DYDX_daily_buy_on_dex
+    17.DYDX_active_users
+    ```
+    
 * NFT Forgery detection
 * NFT Duplicate detection
 * TOP Trending collection
