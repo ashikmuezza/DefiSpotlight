@@ -1,3 +1,4 @@
+from babylon.babylon_extract import baby_extract
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
@@ -33,7 +34,7 @@ with st.sidebar:
         'Select sponsors',
         ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap',
         'Lyra','Chainlink', 'Badger', 'Unstoppable', 'epns',
-        'covalent', 'yearn', 'olympus'))
+        'covalent', 'yearn', 'olympus', 'babylon'))
 
      
 st.header(option)
@@ -74,6 +75,9 @@ elif option == 'yearn' :
 
 elif option == 'olympus':
   olympus_extract()
+
+elif option == 'babylon':
+  baby_extract()
 
 
 
