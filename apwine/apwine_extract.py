@@ -161,7 +161,4 @@ def apwine_extract():
         st.subheader("Aave DEX Volume Polygon")
         st.dataframe(table(data,'Apwine_dex_volume_poly'))
 
-    df = Aave_pools()
-    aave = df['data']['items']
-    df = json_normalize(aave)
-    st.dataframe(df)
+    
