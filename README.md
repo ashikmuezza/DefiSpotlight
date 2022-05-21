@@ -37,10 +37,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of our project is to explain whats going in terms of number in their respective DEFI protocols. It help people to understand whats going in the protocols, so they inverst according to that.
+The main goal of our project is to explain whats going in terms of numbers (DATA) in their respective DEFI protocols. It help people to understand whats going in the protocols, so they inverst according to that.
 
-### Features
-* NFT Wallet growth prediction
+### Protocols
+* Polygon DEX Trades
+    1.Past DEXs 24h Volume in Millions
+    2.Past DEXs 7D Volume in Millions
+    3.Past DEXs 1M Volume in Billions
+    4.DEXs Trailing Past 24h Growth
+    5.DEXs Trailing Past 7D Growth
+    6.DEXs Trailing Past 1M Growth
+    7.Polygon Daily DEXs Volume (LAST_3_MONTHS)
+    8.Polygon Daily DEXs Volume (LAST_3_MONTHS)
+    9.Polygon Weekly DEXs Volume
+    10.Polygon Weekly Volume per DEX
+    11.DEX Marketshare by Volume Last Week
+    12.DEX Marketshare By Trading Volume
+    13.DEXs by Volume
+    14.DEXs by Users
+    15.DEXs by Transaction count
+    16.Aggregators Stats
 * NFT Volume growth prediction
 * NFT Forgery detection
 * NFT Duplicate detection
