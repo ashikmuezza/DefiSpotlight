@@ -136,23 +136,134 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     ```js
     1.Yearn vaults user activity in the latest 24 hours
     2.Yearn vaults user activity in the latest 30 days
-    3.yearn_vault_active_users
-    4.yearn_vault_active__old_users
-    5.yearn_vault_number_of_transactions'
-    6.yearn_vault_unique_users
-    7.yearn_vault_Deposit_Value_Distribution
-    8.yearn_vault_top_25_active_vaults
-    9.yearn_vault_avg_deposit_withdraw_YCRV
-    10.yearn_vault_avg_deposit_withdraw_YLINK
-    11.yearn_vault_avg_deposit_withdraw_YUSDC
-    12.yearn_vault_avg_deposit_withdraw_YUSDT
-    13.yearn_vault_avg_harvested_yCRV
-    14.yearn_vault_avg_harvested_yDAI
-    15.yearn_vault_avg_harvested_yUSDC
-    16.yearn_vault_avg_harvested_yUSDT
+    3.Yearn_vault_active_users
+    4.Yearn_vault_active__old_users
+    5.Yearn_vault_number_of_transactions'
+    6.Yearn_vault_unique_users
+    7.Yearn_vault_Deposit_Value_Distribution
+    8.Yearn_vault_top_25_active_vaults
+    9.Yearn_vault_avg_deposit_withdraw_YCRV
+    10.Yearn_vault_avg_deposit_withdraw_YLINK
+    11.Yearn_vault_avg_deposit_withdraw_YUSDC
+    12.Yearn_vault_avg_deposit_withdraw_YUSDT
+    13.Yearn_vault_avg_harvested_yCRV
+    14.Yearn_vault_avg_harvested_yDAI
+    15.Yearn_vault_avg_harvested_yUSDC
+    16.Yearn_vault_avg_harvested_yUSDT
 
     ```
-* Token Estimated Prize
+* Babylon
+    ```js
+    1.BABL locked in hBABL contract
+    2.Balance USD in hBABL Contract
+    3.hBABL price
+    4.babylon_babl_in_heart_over_time
+    5.babylon_hBABL_daily_balance
+    6.babylon_hbabl_holders_grouped
+    7.babylon_pump_totals
+    8.babylon_hbabl_per_address
+    9.babylon_seed_investment_per_garden
+    10.babylon_heart_babl_sent
+    11.babylon_heart_fees_collected
+    12.babylon_heart_garden_seedinvest
+    13.babylon_heart_liquidity_added
+    ```
+* Badger
+    ```js
+    1.wallet > 0 (Badger)
+    2.wallet > 1000 (Badger)
+    3.wallet > 100,000 (Badger)
+    4.Badger_token_daily_active_users
+    5.Badger_token_daily_new_account
+    6.Badger_token_daily_buys
+    7.Badger_token_total_users
+    8.Badger_token_dex_volume
+    9.Badger_token_transactions
+    10.Digg_trading_volume
+    11.Digg_uniswap_users_over_time
+    12.Digg_susi_users_over_time
+    13.Digg_users_over_time
+    14.ibBTC_supply
+    15.weekly_gas_usage
+    16.weekly_gas_usage_per_type
+    17.Badger_Sett_TVL
+    ```
+* Chainlink
+    ```js
+    1.Wallets with (LINK))
+    2.Wallets with > 10  (LINK)
+    3.Wallets with > 100 (LINK)
+    4.chainlinkVRF_total_link_on_cexs
+    5.chainlink_on_dapps
+    6.chainlinkVRF_v1_BSC_LINK_Earned
+    7.chainlinkVRF_v1_ETH_LINK_Earned
+    8.chainlinkVRF_v1_daily_BSC
+    9.chainlinkVRF_v2_daily_BSC
+    10.chainlinkVRF_v1_daily_ETH
+    11.chainlinkVRF_v2_daily_ETH
+    12.chainlinkVRF_daily_polygon
+    13.chainlinkVRF_keepers_daily_BSC
+    14.chainlinkVRF_keepers_daily_ETH
+    15.chainlinkVRF_keepers_daily_poly
+    16.chainlink_Feed_Requesting_Transactions
+    17.chainlink_active_feeds
+    18.chainlink_active_feeds_requesters
+    ```
+* Covalent
+    ```js
+    1.cqt_price
+    2.cqt_daily_buys_on_dex
+    3.cqt_daily_active_users
+    4.cqt_daily_new_account
+    5.cqt_holders_over_time
+    6.cqt_purchases
+    7.cqt_seven_days_dex_volume
+    8.cqt_seven_days_dex_volume
+    9.cqt_transactions
+    10.cqt_monthly_active_users
+    11.cqt_unique_address_trading
+    ```
+* EPNS
+    ```js
+    1.PUSH Holders
+    2.PUSH Recent AVG Price
+    3.push_price
+    4.PUSH_supply
+    5.PUSH_LP_price
+    6.PUSH_holders
+    7.push_uniswap_lp_holders
+    8.push_weekly_avg_amount_transaction
+    9.PUSH_transfered_amount
+    10.PUSH_avg_transfered_amount
+    ```
+* Lyra
+    ```js
+    1.Notional Volume
+    2.Premium Volume
+    3.Total Trades
+    4.Unique Trades
+    5.Lyra_notational_volume_by_assets
+    6.Daily Unique Traders
+    7.Total Traders By Day
+    8.AVG Traders
+    9.Lyra Top 50 traders profit
+    10.Lyra Top 50 traders volume
+    11.Lyra_btc_marketpool_price
+    12.Lyra_btc_marketpool_price
+    13.Lyra_eth_marketpool_price
+    14.Lyra_eth_marketpool_pool_value
+    15.Lyra_link_marketpool_price
+    16.Lyra_link_marketpool_pool_value
+    17.Lyra Recent Trade History
+    18.lyra_susd_volume
+    19.lyra_profitable_traders
+    20.lyra_high_volume_traders
+    ```
+
+
+
+
+
 
 Website link : [NFT Data House](https://share.streamlit.io/manidills/eth_dash/main.py)
 
