@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -23,7 +23,7 @@ def uniswap_extract():
 
     st.markdown('#') 
 
-    Volume = getdata_fromdune(44614)
+    Volume = getdata(44614)
 
     print(Volume)
 

@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -16,8 +16,8 @@ def olympus_extract():
 
     data = connect("db/olympus.db")
 
-    supply = getdata_fromdune(28599)
-    marketcap = getdata_fromdune(28707)
+    supply = getdata(28599)
+    marketcap = getdata(28707)
 
     col1, col2 = st.columns((2,2))
     col1.metric(label = "Marketcap (OHM)", value ='$'+str(int(marketcap['Market Cap'].iloc[0])) )

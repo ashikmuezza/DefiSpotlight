@@ -1,7 +1,7 @@
 
 import streamlit as st
 import datetime
-from dune import getdata_fromdune
+from dune import getdata
 import numpy as np
 from PIL import Image
 
@@ -21,18 +21,18 @@ def polygon_extract():
     st.markdown('#') 
     
 
-    DEXs24hVolume = getdata_fromdune(630026)
-    DEXs7DVolume = getdata_fromdune(630128)
-    DEXs1MVolume = getdata_fromdune(630161)
+    DEXs24hVolume = getdata(630026)
+    DEXs7DVolume = getdata(630128)
+    DEXs1MVolume = getdata(630161)
     
     col1, col2, col3 = st.columns((3,3,3))
     col1.metric(label = "Past DEXs 24h Volume in Millions", value = str(int(DEXs24hVolume.values)) + "M")
     col2.metric(label = "Past DEXs 7D Volume in Millions", value = str(int(DEXs7DVolume.values )) + "M")
     col3.metric(label = "Past DEXs 1M Volume in Billions", value = str(int(DEXs1MVolume.values)) + "B")
 
-    DEXsTrailingGrowth24h= getdata_fromdune(630173)
-    DEXsTrailingGrowth1w= getdata_fromdune(630455)
-    DEXsTrailingGrowth1m= getdata_fromdune(630450)
+    DEXsTrailingGrowth24h= getdata(630173)
+    DEXsTrailingGrowth1w= getdata(630455)
+    DEXsTrailingGrowth1m= getdata(630450)
 
     st.markdown('#') 
 
@@ -90,10 +90,10 @@ def polygon_extract():
     st.markdown('#') 
     st.markdown("#")
 
-    agg_7d =  getdata_fromdune(630279)
-    agg_growth = getdata_fromdune(631143)
-    agg_volume = getdata_fromdune(630478)
-    agg_user = getdata_fromdune(630487)
+    agg_7d =  getdata(630279)
+    agg_growth = getdata(631143)
+    agg_volume = getdata(630478)
+    agg_user = getdata(630487)
 
     col1, col2 = st.columns((3,3))
     col1.metric(label = "Aggregators Marketshare (From 7D Volume)", value = str(int(agg_7d.values)) + "%")
