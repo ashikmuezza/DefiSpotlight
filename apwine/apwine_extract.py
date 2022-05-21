@@ -85,12 +85,12 @@ def apwine_extract():
     col1, col2 = st.columns((2,2))
     with col1:
         st.markdown('#') 
-        st.subheader("Aave Token Distribution ETH")
+        st.subheader("Apwine Token Distribution ETH")
         st.dataframe(table(data,'Apwine_token_distribution_eth'))
 
     with col2:
         st.markdown('#') 
-        st.subheader("Aave DEX Volume ETH")
+        st.subheader("Apwine DEX Volume ETH")
         st.dataframe(table(data,'Apwine_dex_volume_eth'))
 
    
@@ -112,7 +112,7 @@ def apwine_extract():
 
     col2.metric(label = "Total Token Supply", value = str("{:,}".format(int(Volume["total_supply"]))) )
     
-    col3.metric(label = "Holders on Ethereum", value =  Volume["holders"] )
+    col3.metric(label = "Holders on Polygon", value =  Volume["holders"] )
 
     st.markdown('#')
 
@@ -142,9 +142,9 @@ def apwine_extract():
 
     col1, col2 = st.columns((2,2))
     with col1:
-        line_chart(data, 'Apwine_total_transaction', 'datex','deposit_txns' , 'Aave Total Transaction Deposit')
+        line_chart(data, 'Apwine_total_transaction', 'datex','deposit_txns' , 'Apwine Total Transaction Deposit')
     with col2:
-        line_chart(data, 'Apwine_total_transaction', 'datex','withdraw_txns' , 'Aave Total Transaction Withdraw')
+        line_chart(data, 'Apwine_total_transaction', 'datex','withdraw_txns' , 'Apwine Total Transaction Withdraw')
     
     
 
@@ -153,12 +153,12 @@ def apwine_extract():
     col1, col2 = st.columns((2,2))
     with col1:
         st.markdown('#') 
-        st.subheader("Aave Token Distribution Polygon")
+        st.subheader("Apwine Token Distribution Polygon")
         st.dataframe(table(data,'Apwine_token_distribution_poly'))
 
     with col2:
         st.markdown('#') 
-        st.subheader("Aave DEX Volume Polygon")
+        st.subheader("Apwine DEX Volume Polygon")
         st.dataframe(table(data,'Apwine_dex_volume_poly'))
 
     
