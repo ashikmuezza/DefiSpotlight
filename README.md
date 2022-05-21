@@ -39,7 +39,7 @@
 
 The main goal of our project is to explain whats going in terms of numbers (DATA) in their respective DEFI protocols. It help people to understand whats going in the protocols, so they inverst according to that.
 
-### Protocols
+### Features
 * Polygon DEX Trades
      ```js
     1.Past DEXs 24h Volume in Millions
@@ -69,8 +69,8 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     4.DYDX Daily New Users
     5.DYDX Daily Volume
     6.DYDX_daily_transaction_count
-    7.dydx_USDC Unique Stakers
-    8.dydx_USDC Staked Current Balance
+    7.DYDX_USDC Unique Stakers
+    8.DYDX_USDC Staked Current Balance
     9.DYDX_USDC_Staked
     10.DYDX_amount_of_withdraw
     11.DYDX_daily_stakers
@@ -82,10 +82,76 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     17.DYDX_active_users
     ```
     
-* NFT Forgery detection
-* NFT Duplicate detection
-* TOP Trending collection
-* Token and Wallet Analysis
+* MAKERDAO
+    ```js 
+    1.Maker_price
+    2.Maker_assets_per_type
+    3.Maker_oracle_Medianizer_daily
+    4.Maker_oracle_OSM_Megapoker_daily
+    5.Maker_oracle_gas_fee_Medianizer_daily
+    6.Maker_oracle_gas_fee_OSM_Megapoker_daily
+    7.Maker_oracle_gas_fee_pairs
+    8.Maker_outstanding_dai
+    9.Maker_total_user
+    10.Volumes Maker - Money Markets Inflow
+    11.Volumes Maker - Money Markets Outflow
+    12.Volumes Maker - Money Markets Turnover
+    ```
+* olympus
+     ```js 
+    1.Marketcap (OHM)
+    2.Circulating Supply / Total Supply (OHM)
+    3.OlympusDAO_total_wallet_count
+    4.OlympusDAO_new_users_count
+    5.OHM_Price
+    6.OHM_wallet_distribution
+    7.OHM_holders_over_time
+    8.OHM_price_marketcap
+    9.OHM Transcation_counts
+    10.Active_Ohm_Stakers
+    11.OHM_liqudity_owned
+    12.OHM_Treasury_Breakdown_By_Asset_Type
+    ```
+    
+* Unstoppable
+    ```js
+    1.Polygon Sales Volume in USD
+    2.ETH Sales Volume in USD
+    3.Polygon sales Count
+    4.ETH sales Count
+    5.NFT Sales On Polygon
+    6.NFT Sales On ETH
+    7.Possible NFT Washtraded Sales On Polygon
+    8.Possible NFT Washtraded Sales On ETH
+    9.Total Transactions Counts 
+    10.Most Used Token Symbol
+    11.Most Interacted Wallet
+    12.Max Sale
+    13.Min Sale
+    14.Avg Sale
+    15.Overall Sale Volume
+    16.sale_data
+    ```
+* yearn
+    ```js
+    1.Yearn vaults user activity in the latest 24 hours
+    2.Yearn vaults user activity in the latest 30 days
+    3.yearn_vault_active_users
+    4.yearn_vault_active__old_users
+    5.yearn_vault_number_of_transactions'
+    6.yearn_vault_unique_users
+    7.yearn_vault_Deposit_Value_Distribution
+    8.yearn_vault_top_25_active_vaults
+    9.yearn_vault_avg_deposit_withdraw_YCRV
+    10.yearn_vault_avg_deposit_withdraw_YLINK
+    11.yearn_vault_avg_deposit_withdraw_YUSDC
+    12.yearn_vault_avg_deposit_withdraw_YUSDT
+    13.yearn_vault_avg_harvested_yCRV
+    14.yearn_vault_avg_harvested_yDAI
+    15.yearn_vault_avg_harvested_yUSDC
+    16.yearn_vault_avg_harvested_yUSDT
+
+    ```
 * Token Estimated Prize
 
 Website link : [NFT Data House](https://share.streamlit.io/manidills/eth_dash/main.py)
