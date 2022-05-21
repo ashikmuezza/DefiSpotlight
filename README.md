@@ -58,6 +58,7 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     14.DEXs by Users
     15.DEXs by Transaction count
     16.Aggregators Stats
+    ** Aave polygon stats
    
    ```
 
@@ -277,7 +278,7 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
 
     ```
 
-* Aawe
+* Aave
     ```js
     1.Aave Polygon Transcation details
     2.Aave Users Cummulative
@@ -370,6 +371,7 @@ API key from covalent to get access for data.
 * scikit_learn==1.0.2
 * streamlit==1.4.0
 * streamlit-aggrid
+* sqlite
 
 
 
@@ -377,25 +379,24 @@ API key from covalent to get access for data.
 <!-- CONTRIBUTING -->
 ## API
 
-We have used API's from covalent for listing transcation details, collection details,etc.
+We have used API's from covalent for listing transcation details, analayze and etc.
 
 
-* COVALENTHQ API
+* COVALENTHQ API USED
 
-https://api.covalenthq.com/v1/1/tokens/0xe4605d46fd0b3f8329d936a8b258d69276cba264/nft_metadata/123/?key=ckey_docs
+1.https://api.covalenthq.com/v1/1/address/{address}/transactions_v2/?key=key 
+2.https://api.covalenthq.com/v1/1/transaction_v2/{hash}/?key=key 
+3.https://api.covalenthq.com/v1/1/networks/aave_v2/assets/?quote-currency=USD&format=JSON&key=ckey_docs
 
-https://api.covalenthq.com/v1/:chain_id/nft_market/?&key=
-
-https://api.covalenthq.com/v1/:chain_id/nft_market/collection/:collection_address/?&key=
-
-https://api.covalenthq.com/v1/:chain_id/tokens/:contract_address/nft_transactions/:token_id/?&key=
-
-
+Above apis are used to get transaction details for protocols that help to make seperate tables on sqlite.
 ## Acknowledgments
 
 Would like to give credit to below teams for providing the API's
 
 * [Covalent](https://www.covalenthq.com/)
+* [ETL](https://github.com/blockchain-etl/ethereum-etl)
+* [polygon ETL](https://github.com/blockchain-etl/polygon-etl)
+* Filpsidecrypto // Dune
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
