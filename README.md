@@ -321,7 +321,7 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
 
 
 
-Website link : [NFT Data House](https://share.streamlit.io/ashikmuezza/defi_dashboard/main/main.py)
+Website link : [DEFI Spotlight](https://share.streamlit.io/ashikmuezza/defi_dashboard/main/main.py)
 
 
 
