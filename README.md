@@ -4,7 +4,7 @@
 
 <br />
 <div align="center">
-    <img src="https://ibb.co/c2J0Fwy" alt="Logo" width="80" height="80">
+    <img src="https://i.ibb.co/CVBg76w/Add-a-heading.png" alt="Logo" width="80" height="80">
   <h3 align="center">NFT Data House</h3>
 </div>
 
