@@ -1,3 +1,4 @@
+from get_data import Aave_pools
 import streamlit as st
 import plost
 import altair as alt
@@ -8,6 +9,7 @@ from pathlib import Path
 import sqlite3
 from sqlite3 import Connection
 from common.connect import *
+from pandas import json_normalize
 
 
 def apwine_extract():
@@ -158,3 +160,8 @@ def apwine_extract():
         st.markdown('#') 
         st.subheader("Aave DEX Volume Polygon")
         st.dataframe(table(data,'Apwine_dex_volume_poly'))
+
+    df = Aave_pools()
+    aave = df['data']['items']
+    df = json_normalize(aave)
+    st.dataframe(df)

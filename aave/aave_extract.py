@@ -8,6 +8,8 @@ from pathlib import Path
 import sqlite3
 from sqlite3 import Connection
 from common.connect import *
+from get_data import Aave_pools
+from pandas import json_normalize
 
 
 def aave_extract():
@@ -82,6 +84,12 @@ def aave_extract():
     st.markdown('#') 
     st.subheader("Aave Polygon Financial Statements")
     st.dataframe(table(data,'Aave_v3_Polygon_Financial_Statements'))
+
+    st.subheader("Aave pools")
+    df = Aave_pools()
+    aave = df['data']['items']
+    df = json_normalize(aave)
+    st.dataframe(df)
 
     
    

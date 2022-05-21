@@ -18,3 +18,15 @@ def transaction(hash):
     else:
         return 'error'
 
+def Aave_pools():
+    url= f'https://api.covalenthq.com/v1/1/networks/aave_v2/assets/?quote-currency=USD&format=JSON&key=ckey_eb29565e970e4b46930dca374df'
+    response = requests.request("GET", url)
+    if response.status_code == 200:
+        data1 = response.json()
+        return data1
+    else:
+        return 'error'
+
+
+
+
