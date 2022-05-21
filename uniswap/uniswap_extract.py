@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata
+from metrics import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -83,10 +83,17 @@ def uniswap_extract():
     st.markdown('#') 
     st.subheader("Uniswap v3 ETH Table")
     st.dataframe(table(data,'Uniswap_v3_ETH_table'))
+    
+    line_chart(data, 'Uniswap_v3_ETH_table', 'day', 'volume', 'volume')
+    line_chart(data, 'Uniswap_v3_ETH_table', 'day', 'trades', 'Trades')
+    line_chart(data, 'Uniswap_v3_ETH_table', 'day', 'fees', 'Fee')
 
     st.markdown('#') 
     st.subheader("Uniswap v3 ETH gas Paid per Swap")
     st.dataframe(table(data,'Uniswap_v3_eth_gas_paid_per_swap'))
+
+    line_chart(data, 'Uniswap_v3_eth_gas_paid_per_swap', 'hour', 'median_gas_used_usd', 'median_gas_used_usd')
+    line_chart(data, 'Uniswap_v3_eth_gas_paid_per_swap', 'hour', 'median_gwei', 'median_gwei')
         
     
    

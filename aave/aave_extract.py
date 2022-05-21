@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata
+from metrics import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -18,6 +18,14 @@ def aave_extract():
     st.markdown(Defi_title, unsafe_allow_html=True)
 
     data = connect('db/aave.db')
+
+    col1, col2, col3 = st.columns((2,2,2))
+
+    met = getdata(75929)
+
+    col1.metric(label='Active User (1D) [polygon]', value=met['total_users1'].iloc[0])
+    col2.metric(label='Active User (7D) [polygon]', value=met['total_users7'].iloc[0])
+    col3.metric(label='Active User (30D) [polygon]', value=met['total_users30'].iloc[0])
 
     st.markdown('#')
     st.markdown('#')

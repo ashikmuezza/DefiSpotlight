@@ -2,7 +2,7 @@ import streamlit as st
 import plost
 import altair as alt
 import datetime
-from dune import getdata
+from metrics import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3

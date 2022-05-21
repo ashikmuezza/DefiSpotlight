@@ -1,7 +1,7 @@
 from babylon.babylon_extract import baby_extract
 import streamlit as st
 import datetime
-from dune import getdata
+from metrics import getdata
 import numpy as np
 from PIL import Image
 from polygon_defi.polygon_extract import polygon_extract

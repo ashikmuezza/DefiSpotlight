@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import datetime
-from dune import getdata_fromdune
+from metrics import getdata
 import pandas as pd
 from pathlib import Path
 import sqlite3
@@ -20,9 +20,9 @@ def dydx_extract():
 
     st.markdown('#') 
 
-    grater_then_zero = getdata_fromdune(427692)
-    grater_then_thousand = getdata_fromdune(427694)
-    grater_then_hun_thousand = getdata_fromdune(427697)
+    grater_then_zero = getdata(427692)
+    grater_then_thousand = getdata(427694)
+    grater_then_hun_thousand = getdata(427697)
     
     col1, col2, col3 = st.columns((3,3,3))
     col1.metric(label = "Wallets with > 0 Address (DYDX)", value = str(int(grater_then_zero.values)) )

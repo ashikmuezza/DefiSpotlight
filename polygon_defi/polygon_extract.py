@@ -1,7 +1,6 @@
-
 import streamlit as st
 import datetime
-from dune import getdata
+from metrics import getdata
 import numpy as np
 from PIL import Image
 
