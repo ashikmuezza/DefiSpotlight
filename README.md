@@ -309,14 +309,14 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     9.Apwine Token Daily Buy
     10.Apwine User Growth ETH
     11.Apwine Token Cumulative Sell
-    12.Aave Token Distribution ETH
-    13.Aave DEX Volume ETH
+    12.Apwine Token Distribution ETH
+    13.Apwine DEX Volume ETH
     14.Apwine DEX Usage Polygon
     15.Apwine User Growth Polygon 
-    16.Aave Total Transaction Deposit
-    17.Aave Total Transaction Withdraw
-    18.Aave Token Distribution Polygon
-    19.Aave DEX Volume Polygon
+    16.Apwine Total Transaction Deposit
+    17.Apwine Total Transaction Withdraw
+    18.Apwine Token Distribution Polygon
+    19.Apwine DEX Volume Polygon
     ```
 
 
