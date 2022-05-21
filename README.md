@@ -259,9 +259,63 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     19.lyra_profitable_traders
     20.lyra_high_volume_traders
     ```
+* Uniswap
+    ```js
+    1.Total Trading Volume (All Pairs)
+    2.Trading Volume in Top 15 Pairs
+    3.Total LP Fees (All Pairs)
+    4.LP Fees in Top 15 Pairs
+    5.Uniswap daily transactions by volume (USD)
+    6.Uniswap vs Sushi pools
+    7.Uniswap polygon daily transaction count
+    8.Uniswap polygon daily unique address 
+    9.Uniswap polygon weekly transaction count
+    10.Uniswap polygon weekly unique address
+    11.Uniswap Trade per Month
+    12.Uniswap_v3_ETH_table
+    13.Uniswap_v3_eth_gas_paid_per_swap
+
+    ```
+
+* Aawe
+    ```js
+    1.Aave Polygon Transcation details
+    2.Aave Users Cummulative
+    3.Aave Daily Users
+    4.Aave Polygon Borrow Volume
+    5.Aave Polygon Deposit Volume
+    6.Aave Polygon Flash Loan Volume
+    7.Aave Polygon Liqudation Volume
+    8.Aave Polygon Repay Volume
+    9.Aave Polygon Transaction Volume
+    10.Aave Polygon Withdraw Volume
+    11.Aave Polygon Financial Statements
+
+    ```
 
 
-
+* Apwine
+    ```js
+    1.Fully Diluted Market Cap - ETH & Polygon
+    2.Total Token Supply - ETH & Polygon
+    3.Holders on Ethereum - ETH & Polygon
+    4.Circulating Supply - ETH & Polygon
+    5.Total Traded Volume - ETH & Polygon
+    6.$APW Price - ETH & Polygon
+    7.Apwine DEX Usage ETH
+    8.Apwine Token Daily Buy
+    9.Apwine Token Daily Buy
+    10.Apwine User Growth ETH
+    11.Apwine Token Cumulative Sell
+    12.Aave Token Distribution ETH
+    13.Aave DEX Volume ETH
+    14.Apwine DEX Usage Polygon
+    15.Apwine User Growth Polygon 
+    16.Aave Total Transaction Deposit
+    17.Aave Total Transaction Withdraw
+    18.Aave Token Distribution Polygon
+    19.Aave DEX Volume Polygon
+    ```
 
 
 
