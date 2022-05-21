@@ -81,7 +81,7 @@ def lyra_home():
 
     with col1:
 
-        line_chart(data, 'Lyra_eth_marketpool', 'evt_block_time', 'Price', 'Lyra_eth_marketpool_pool_value')
+        line_chart(data, 'Lyra_eth_marketpool', 'evt_block_time', 'Price', 'Lyra_eth_marketpool_price')
    
     with col2:
 
@@ -92,7 +92,7 @@ def lyra_home():
 
     with col1:
 
-        line_chart(data, 'Lyra_link_marketpool', 'evt_block_time', 'Price', 'Lyra_link_marketpool_pool_value')
+        line_chart(data, 'Lyra_link_marketpool', 'evt_block_time', 'Price', 'Lyra_link_marketpool_price')
    
     with col2:
 
