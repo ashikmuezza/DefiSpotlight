@@ -41,7 +41,8 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
 
 ### Protocols
 * Polygon DEX Trades
-    1.Past DEXs 24h Volume in Millions
+     ```js
+         1.Past DEXs 24h Volume in Millions
     2.Past DEXs 7D Volume in Millions
     3.Past DEXs 1M Volume in Billions
     4.DEXs Trailing Past 24h Growth
@@ -57,6 +58,9 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     14.DEXs by Users
     15.DEXs by Transaction count
     16.Aggregators Stats
+   
+   ```
+
 * NFT Volume growth prediction
 * NFT Forgery detection
 * NFT Duplicate detection
