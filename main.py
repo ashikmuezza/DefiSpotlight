@@ -1,3 +1,4 @@
+from babylon.babylon_extract import baby_extract
 import streamlit as st
 import datetime
 from dune import getdata_fromdune
@@ -14,6 +15,7 @@ from unstoppable.unstop_extract import unstop_extract
 from epns.epns_extract import epns_extract
 from common.covalent.covalent_extract import covalent_extract
 from yearn.yearn_extract import yearn_extract
+from olympus.olympus_extract import olympus_extract
 
 import time
 
@@ -32,7 +34,7 @@ with st.sidebar:
         'Select sponsors',
         ('DEFI','Polygon', 'DYDX','Makerdao','Uniswap',
         'Lyra','Chainlink', 'Badger', 'Unstoppable', 'epns',
-        'covalent', 'yearn'))
+        'covalent', 'yearn', 'olympus', 'babylon'))
 
      
 st.header(option)
@@ -70,6 +72,12 @@ elif option == 'covalent' :
 
 elif option == 'yearn' :
   yearn_extract()
+
+elif option == 'olympus':
+  olympus_extract()
+
+elif option == 'babylon':
+  baby_extract()
 
 
 
