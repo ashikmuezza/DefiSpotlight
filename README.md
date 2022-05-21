@@ -383,10 +383,12 @@ We have used API's from covalent for listing transcation details, analayze and e
 
 
 * COVALENTHQ API USED
+```js
 
 1.https://api.covalenthq.com/v1/1/address/{address}/transactions_v2/?key=key 
 2.https://api.covalenthq.com/v1/1/transaction_v2/{hash}/?key=key 
 3.https://api.covalenthq.com/v1/1/networks/aave_v2/assets/?quote-currency=USD&format=JSON&key=ckey_docs
+```
 
 Above apis are used to get transaction details for protocols that help to make seperate tables on sqlite.
 ## Acknowledgments
