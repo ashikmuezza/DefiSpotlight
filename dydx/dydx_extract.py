@@ -41,14 +41,14 @@ def dydx_extract():
     
 
     st.title("Staking Stats")
-    unique = getdata_fromdune(233667)
+    unique = getdata(233667)
     unique_value = unique['unique_stakers'].iloc[0]
 
     st.markdown('#') 
 
     col1, col2= st.columns((2,2))
     col1.metric(label = "dydx_USDC Unique Stakers", value = str(int(unique_value)) )
-    col2.metric(label = "dydx_USDC Staked Current Balance", value = "$"+str(int(getdata_fromdune(233683).values )) )
+    col2.metric(label = "dydx_USDC Staked Current Balance", value = "$"+str(int(getdata(233683).values )) )
 
     st.markdown('#') 
 
