@@ -5,7 +5,7 @@
 <br />
 <div align="center">
     <a href="https://ibb.co/c2J0Fwy"><img src="https://i.ibb.co/c2J0Fwy/Add-a-heading.png" alt="Add-a-heading" border="0"></a>
-  <h3 align="center">NFT Data House</h3>
+  <h3 align="center">DEFI SPOTLIGHT</h3>
 </div>
 
 
@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of our project is to encourage individuals to invest in the proper NFTs based on our data because many people find it difficult or harder to choose the right NFTs for their wallet. 
+The main goal of our project is to explain whats going in terms of number in their respective DEFI protocols. It help people to understand whats going in the protocols, so they inverst according to that.
 
 ### Features
 * NFT Wallet growth prediction
