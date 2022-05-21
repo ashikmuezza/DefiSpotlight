@@ -392,11 +392,13 @@ Above apis are used to get transaction details for protocols that help to make s
 ## Acknowledgments
 
 Would like to give credit to below teams for providing the API's
+    ```js
 
 * [Covalent](https://www.covalenthq.com/)
 * [ETL](https://github.com/blockchain-etl/ethereum-etl)
 * [polygon ETL](https://github.com/blockchain-etl/polygon-etl)
 * Filpsidecrypto // Dune
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
