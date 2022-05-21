@@ -59,6 +59,7 @@ The main goal of our project is to explain whats going in terms of numbers (DATA
     15.DEXs by Transaction count
     16.Aggregators Stats
     ** Aave polygon stats
+    ** Apwine polygon stats
    
    ```
 
