@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of our project is to explain whats going in terms of numbers (DATA) in their respective DEFI protocols. It help people to understand whats going in the protocols, so they inverst according to that.
+The main goal of this research is to provide a statistical summary of DEFI protocols with the data. People are then able to comprehend the DEFI protocols and make appropriate investments.
 
 ### Features
 * Polygon DEX Trades
