@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of this research is to provide a statistical summary of DEFI protocols with the data. People are then able to comprehend the DEFI protocols and make appropriate investments.
+The main goal of this research is to provide a statistical summary of DEFI protocols with the data. People are then able to comprehend the DEFI protocols and make appropriate investments. It is an all-in-one data insights and analytics dashboard for decentralized finance for web3, that collects and organizes a variety of quantitative and qualitative data 
 
 ### Features
 * Polygon DEX Trades
